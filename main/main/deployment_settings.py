@@ -1,5 +1,4 @@
 import os
-from backend.main import dj_database_url
 from .settings import *  
 from .settings import BASE_DIR
 
@@ -34,9 +33,3 @@ STORAGES = {
     },
 }
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'),
-        conn_max_age=600
-    )
-}
